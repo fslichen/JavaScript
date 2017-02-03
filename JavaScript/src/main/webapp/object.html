@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var object = {// Just like how mongodb stores data.
+		name : 'Elsa',
+		gender : 'F',
+		education : {
+			school : 'UCLA',
+			gpa : 'B+'
+		},
+		method : function(data) {
+			alert('The method within the object has been called. The data is ' + data);
+		}
+	}
+	alert(JSON.stringify(object));
+	alert(object.education.school);
+	object.method('anyData');
+	var objects = [{name : 'Chen', gender : 'M'}, {name : 'Elsa', gender : 'F'}];
+	var json = JSON.stringify(objects);// Turn javascript object into json.
+	alert(json);
+	var objects = JSON.parse(json)// Turn json into javascript object.
+	alert(objects[0].name);
+</script>
+</head>
+<body>
+
+</body>
+</html>

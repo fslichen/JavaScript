@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var url = "http://localhost:8080/post";
+	var request = new XMLHttpRequest();
+	request.open("POST", url, true);
+	request.setRequestHeader("Content-type", "application/json;charset=UTF-8");// Send the proper header information along with the request.
+	request.onreadystatechange = function() {// Call a function when the state changes.
+		if (request.readyState == 4 && request.status == 200) {
+			alert(request.responseText);
+		}
+	}
+	var requestDto = {
+		name : 'Chen',
+		anotherDto : {
+			gender : 'M',
+			theOtherDto : {
+				age : 27
+			}
+		}
+	}
+	request.send(JSON.stringify(requestDto));// You need to turn the embedded object into a json string before send the request. 	
+</script>
+</head>
+<body>
+
+</body>
+</html>

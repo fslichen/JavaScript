@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var url = 'http://localhost:8080/get';
+	var request = new XMLHttpRequest();
+	request.open('GET', url, true);
+	request.onreadystatechange = function() {// Call a function when the state changes.
+		if (request.readyState == 4 && request.status == 200) {
+			alert(request.responseText);
+		}
+	}
+	request.send(null);
+</script>
+</head>
+<body>
+
+</body>
+</html>

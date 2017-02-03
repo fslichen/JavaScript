@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function iterate(array) {
+		for (var i = 0; i < array.length; i++) {
+			alert(array[i]);
+		}
+	}
+	var array = ['a', 'b', 'c'];
+	iterate(array);
+	var array = [1, 2, 3];
+	iterate(array);// Re-declaration is ok.
+	var array = [true, false, true];
+	iterate(array);
+</script>
+</head>
+<body>
+
+</body>
+</html>
