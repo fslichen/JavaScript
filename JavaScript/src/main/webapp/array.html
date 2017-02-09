@@ -10,10 +10,15 @@
 		}
 	}
 	var array = ['a', 'b', 'c'];
-	iterate(array);
+	//iterate(array);
 	var array = [1, 2, 3];
-	iterate(array);// Re-declaration is ok.
+	//iterate(array);// Re-declaration is ok.
 	var array = [true, false, true];
+	//iterate(array);
+	var array = [];
+	for (var i = 0; i < 2; i++) {
+		array.push(i);
+	}
 	iterate(array);
 </script>
 </head>
